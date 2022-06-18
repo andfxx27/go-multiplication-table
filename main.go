@@ -1,16 +1,13 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 
-	"github.com/andfxx27/go-static-site/src/domain"
+	"github.com/andfxx27/go-multiplication-table/src/domain"
 )
 
 func main() {
-	fmt.Println("Hello world from go-static-site")
-
 	http.HandleFunc("/", domain.IndexHandler)
 
 	log.Println("Application started on :4000...")
