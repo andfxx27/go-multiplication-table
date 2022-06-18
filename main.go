@@ -7,14 +7,13 @@ import (
 	"os"
 
 	"github.com/andfxx27/go-multiplication-table/src/domain"
-	"github.com/joho/godotenv"
 )
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatalln(err)
-	}
+	// err := godotenv.Load()
+	// if err != nil {
+	// 	log.Fatalln(err)
+	// }
 
 	http.HandleFunc("/", domain.IndexHandler)
 
