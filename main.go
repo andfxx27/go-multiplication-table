@@ -18,6 +18,10 @@ func main() {
 	http.HandleFunc("/", domain.IndexHandler)
 
 	port := os.Getenv("PORT")
+	if port == "" {
+		port = "4000"
+	}
+
 	log.Printf("Application started on :%v", port)
 	log.Fatalln(http.ListenAndServe(fmt.Sprintf(":%v", port), nil))
 }
